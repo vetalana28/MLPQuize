@@ -458,7 +458,121 @@ body {
 
 }
 
+@media (max-width: 600px)
+{
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
 
+    .title {
+        font-size: 34px;
+    }
+
+    .description {
+        font-size: 16px;
+        padding: 0 15px;
+    }
+
+    .start-btn {
+        font-size: 16px;
+        padding: 10px 10px;
+        width: 60%;
+        justify-content: center;
+    }
+
+    .screen2 {
+        padding: 30px 16px;
+    }
+
+    .question {
+        font-size: 24px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+
+    .answers-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-bottom: 24px;
+    }
+
+    .answers-container {
+        padding: 18px 20px;
+        font-size: 16px;
+        gap: 14px;
+    }
+
+    .circle-pink-answer,
+    .circle-blue-answer,
+    .circle-green-answer,
+    .circle-purple-answer {
+        width: 38px;
+        height: 38px;
+    }
+
+    .next-btn {
+        width: 100%;
+        justify-content: center;
+        font-size: 18px;
+        padding: 16px 28px;
+    }
+
+    .dot {
+        width: 24px;
+        height: 6px;
+    }
+
+    .progress-bar {
+        gap: 6px;
+        margin-top: 20px;
+    }
+
+    .result-img {
+        height: 220px;
+    }
+
+    .pony-result {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .result-description {
+        font-size: 16px;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .adjectives-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .adjectives {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+
+    .screen-end-btn {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .again-btn,
+    .share-btn {
+        width: 100%;
+        justify-content: center;
+        font-size: 16px;
+        padding: 14px 24px;
+    }
+
+    .circle-pink   { width: 40vw; height: 40vw; }
+    .circle-blue   { width: 50vw; height: 50vw; }
+    .circle-purple { width: 55vw; height: 55vw; }
+    .circle-green  { width: 30vw; height: 30vw; }
+}
 
 
 
