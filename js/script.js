@@ -143,12 +143,6 @@ answerBtn.forEach((btn, index) => {
 }
 );
 
-const counts = [0, 0, 0, 0];
-userAnswers.forEach(a => {
-    if (a !== null) {
-        counts[a]++;
-    }
-});
 
 function calculateResult() {
     const scores = {
