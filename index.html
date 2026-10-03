@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLP</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main>
+
+        <section id="start-screen" class="screen1 ">
+
+            <div class="circle-pink circle"></div>
+
+            <div class="circle-blue circle"></div>
+
+            <div class="circle-purple circle"></div>
+
+            <div class="circle-green circle"></div>
+
+
+
+            <div class="screen-start-content">
+
+                <p class="quantity-questions">ТЕСТ - 8 ВОПРОСОВ</p>
+
+                <h1 class="title">Какая ты пони из Эквестрии?</h1>
+
+                <p class="description">Пройти короткий тест и узнай, какой пони-характер живёт внутри тебя - доброй,
+                    весёлой
+                    или магической</p>
+
+                <button type="button" id="start-btn" class="start-btn">Начать тест</button>
+
+
+                <p class="time">Займёт около 3 минут</p>
+
+            </div>
+
+        </section>
+
+
+
+
+
+        <section id="quiz-screen" class="screen2 hidden">
+
+            <header class="header-quiz">
+
+                <button type="button" id="back-btn" class="back-btn">
+                    <p>←</p>
+                </button>
+
+
+
+                <p class="question-counter">
+
+                    Вопрос <span id="current-question">1</span> из 8
+
+                </p>
+
+            </header>
+
+            <div class="progress-bar">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+
+            </div>
+
+            <h2 id="question" class="question">Вставить текст вопроса</h2>
+
+            <div class="answers-grid">
+
+                <button type="button" class="answers-container">
+
+                    <div class="circle-pink-answer"></div>
+
+                    <p id="answer1">Вставь текст ответа</p>
+
+                </button>
+
+                <button type="button" class="answers-container">
+
+                    <div class="circle-blue-answer"></div>
+
+                    <p id="answer2">Вставь текст ответа</p>
+
+                </button>
+
+                <button type="button" class="answers-container">
+
+                    <div class="circle-green-answer"></div>
+
+                    <p id="answer3">Вставь текст ответа</p>
+
+                </button>
+
+                <button type="button" class="answers-container">
+
+                    <div class="circle-purple-answer"></div>
+
+                    <p id="answer4">Вставь текст ответа</p>
+
+                </button>
+
+            </div>
+
+            <button type="button" id="next-btn" class="next-btn">Далее →</button>
+
+        </section>
+
+
+
+
+
+        <section id="result-screen" class="screen3 hidden">
+
+            <div class="circle-pink circle"></div>
+
+            <div class="circle-blue circle"></div>
+
+            <div class="circle-purple circle"></div>
+
+            <div class="circle-green circle"></div>
+
+            <div class="result-screen-container">
+
+                <p class="quantity-questions-end">ТВОЙ РЕЗУЛЬТАТ</p>
+
+                <img src="image/Сумеречная Искорка.png" alt="" id="result-img" class="result-img">
+
+                <p  class="pony-result">Ты - <span id="pony-result">Вставь пони</span></p>
+
+                <p id="result-description" class="result-description">Вставь описание юзера</p>
+
+                <div class="adjectives-container">
+
+                    <div id="adjectives1" class="adjectives">Вставь прилагательное</div>
+
+                    <div id="adjectives2"  class="adjectives">Вставь прилагательное</div>
+
+                    <div id="adjectives3" class="adjectives">Вставь прилагательное</div>
+
+                </div>
+
+                <div class="screen-end-btn">
+
+                    <button type="button" id="again-btn" class="again-btn">Пройти ещё раз</button>
+
+                    <button type="button" id="share-btn" class="share-btn">Поделиться</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <script src="js/script.js">
+
+            
+
+
+
+        </script>
+
+
+    </main>
+
+</body>
+
+</html>
