@@ -9,6 +9,7 @@ const backBtn = document.getElementById('back-btn');
 const nextBtn = document.getElementById('next-btn');
 const againBtn = document.getElementById('again-btn');
 const answerBtn = document.querySelectorAll('.answers-container');
+const shareBtn = document.getElementById('share-btn');
 
 // маркеры
 const dots = document.querySelectorAll('.dot');
