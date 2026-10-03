@@ -268,49 +268,32 @@ nextBtn.addEventListener('click', () => {
 
 });
 
-shareBtn.addEventListener('click', async () => {
+shareBtn.addEventListener('click', () => {
+    // берём имя пони, которое уже показано на экране
+    const ponyName = document.getElementById('pony-result').textContent;
     const url = window.location.href;
-    const title = 'Какая ты пони из Эквестрии?';
-    const text = 'Я прошёл тест! Узнай, какая пони живёт внутри тебя:';
 
-    // 1. Нативное меню (телефоны, Safari)
-    if (navigator.share) {
-        try {
-            await navigator.share({ title, text, url });
-            return;
-        } catch (err) {
-            // пользователь отменил или ошибка — идём дальше
-        }
-    }
+    // собираем текст
+    const text = `Я ${ponyName}, а ты? ${url}`;
 
-    // 2. Современный clipboard (работает на https / localhost)
-    if (navigator.clipboard && window.isSecureContext) {
-        try {
-            await navigator.clipboard.writeText(url);
-            showCopied();
-            return;
-        } catch (err) {
-            // не получилось — идём дальше
-        }
-    }
-
-    // 3. Старый execCommand (работает даже на file:///)
-    const input = document.createElement('input');
-    input.value = url;
+    // создаём невидимое поле, кладём туда текст
+    const input = document.createElement('textarea');
+    input.value = text;
+    input.style.position = 'fixed';
+    input.style.opacity = '0';
     document.body.appendChild(input);
-    input.select();
-    try {
-        document.execCommand('copy');
-        showCopied();
-    } catch (err) {
-        // 4. Совсем не получилось — показываем окно
-        prompt('Скопируй ссылку:', url);
-    }
-    document.body.removeChild(input);
-});
 
-function showCopied() {
+    // выделяем и копируем
+    input.select();
+    document.execCommand('copy');
+
+    // убираем поле
+    document.body.removeChild(input);
+
+    // показываем "Скопировано!"
     const oldText = shareBtn.textContent;
     shareBtn.textContent = 'Скопировано!';
-    setTimeout(() => shareBtn.textContent = oldText, 1500);
-}
+    setTimeout(() => {
+        shareBtn.textContent = oldText;
+    }, 1500);
+});
